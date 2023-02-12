@@ -79,7 +79,9 @@
 {{- partial "plugin/style.html" $style -}}
 {{- end -}}
 
-{{- if ne $offline true -}}
+{{ template "_internal/google_analytics.html" . }}
+
+<!-- {{- if ne $offline true -}}
 {{- $analytics := .Site.Config.Privacy.GoogleAnalytics -}}
 {{- if not $analytics.Disable }}{{ with .Site.GoogleAnalytics -}}
     {{ if hasPrefix . "G-"}}
@@ -90,4 +92,4 @@
         <link rel="dns-prefetch" href="https://www.google-analytics.com">
     {{- end -}}
 {{- end -}}{{ end -}}
-{{- end -}}
+{{- end -}} -->

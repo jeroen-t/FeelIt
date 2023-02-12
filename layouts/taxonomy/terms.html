@@ -22,11 +22,11 @@
                     {{- with $.Site.GetPage "taxonomy" (printf "%v/%v" $type $term) -}}
                     <div class="card-item">
                         <div class="card-item-wrapper">
-                            <h3 class="card-item-title">
+                            <h1 class="card-item-title">
                                 <a href="{{ .RelPermalink }}">
                                     {{ .Page.Title }}
                                 </a>
-                            </h3>
+                            </h1>
                             {{- range first 5 $pages -}}
                                 <div class="categories-item">
                                     <a href="{{ .RelPermalink }}" class="categories-item-link">
